@@ -4,7 +4,8 @@ import Image from 'next/image';
 import type { Product } from '@/types';
 import { useCartStore } from '@/store';
 import toast from 'react-hot-toast';
-import { FiStar, FiStarHalf } from 'react-icons/fi';
+import { FiStar } from 'react-icons/fi';
+import { FaStarHalfAlt } from 'react-icons/fa';
 
 export default function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCartStore();
@@ -20,7 +21,7 @@ export default function ProductCard({ product }: { product: Product }) {
       if (i <= Math.floor(rating)) {
         stars.push(<FiStar key={i} className="text-amazon-yellow fill-amazon-yellow" />);
       } else if (i - 0.5 <= rating) {
-        stars.push(<FiStarHalf key={i} className="text-amazon-yellow fill-amazon-yellow" />);
+        stars.push(<FaStarHalfAlt key={i} className="text-amazon-yellow fill-amazon-yellow" />);
       } else {
         stars.push(<FiStar key={i} className="text-gray-400" />);
       }

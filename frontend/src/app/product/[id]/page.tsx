@@ -6,7 +6,7 @@ import type { Product } from '@/types';
 import { useCartStore } from '@/store';
 import toast from 'react-hot-toast';
 import Image from 'next/image';
-import { FiStar, FiStarHalf, FiTruck, FiShield, FiRefreshCw } from 'react-icons/fi';
+import { FiStar, FiTruck, FiShield, FiRefreshCw } from 'react-icons/fi';
 
 export default function ProductPage() {
   const { id } = useParams();
